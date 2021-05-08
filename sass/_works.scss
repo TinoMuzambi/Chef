@@ -6,6 +6,11 @@
 		@include flexAllCol;
 		gap: 2rem;
 		position: relative;
+		text-align: center;
+
+		@include mq(768px) {
+			// background-size: cover;
+		}
 
 		&::after {
 			content: "";
@@ -22,8 +27,19 @@
 			z-index: 2;
 		}
 
+		.title {
+			@include mq(768px) {
+				order: 2;
+			}
+		}
+
 		.subtitle {
 			font-size: 3rem;
+
+			@include mq(768px) {
+				font-size: 2rem;
+				order: 1;
+			}
 		}
 	}
 
