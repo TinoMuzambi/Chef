@@ -4,6 +4,7 @@ import {
 	Slide,
 	ButtonBack,
 	ButtonNext,
+	DotGroup,
 } from "pure-react-carousel";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
@@ -22,6 +23,8 @@ const Works = () => {
 					naturalSlideWidth={100}
 					naturalSlideHeight={40}
 					totalSlides={works.length}
+					infinite={true}
+					isPlaying={true}
 				>
 					<Slider>
 						{works.map((work) => (
@@ -42,6 +45,7 @@ const Works = () => {
 					<ButtonNext className="right">
 						<BsChevronRight />
 					</ButtonNext>
+					<DotGroup className="dots" showAsSelectedForCurrentSlideOnly={true} />
 				</CarouselProvider>
 			</div>
 		</section>
