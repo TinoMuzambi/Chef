@@ -30,13 +30,6 @@ const Works = () => {
 						</div>
 					))}
 				</Slider>
-				{/* <ButtonBack className="left">
-						<BsChevronLeft />
-					</ButtonBack>
-					<ButtonNext className="right">
-						<BsChevronRight />
-					</ButtonNext>
-					<DotGroup className="dots" showAsSelectedForCurrentSlideOnly={true} /> */}
 			</div>
 		</section>
 	);
