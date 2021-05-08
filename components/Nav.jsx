@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const Nav = () => {
 	const [active, setActive] = useState(false);
@@ -10,7 +11,9 @@ const Nav = () => {
 				<li
 					onClick={() => {
 						setActive(false);
-						document.body.scrollIntoView({ behavior: "smooth" });
+						document.body.scrollIntoView({
+							behavior: "smooth",
+						});
 					}}
 				>
 					Home
@@ -18,9 +21,10 @@ const Nav = () => {
 				<li
 					onClick={() => {
 						setActive(false);
-						document
-							.querySelector(".works")
-							.scrollIntoView({ behavior: "smooth" });
+						document.querySelector(".works").scrollIntoView({
+							behavior: "smooth",
+							block: isMobile ? "center" : "start",
+						});
 					}}
 				>
 					Works
@@ -30,7 +34,10 @@ const Nav = () => {
 						setActive(false);
 						document
 							.querySelector(".booking")
-							.scrollIntoView({ behavior: "smooth" });
+							.scrollIntoView({
+								behavior: "smooth",
+								block: isMobile ? "center" : "start",
+							});
 					}}
 				>
 					Booking
