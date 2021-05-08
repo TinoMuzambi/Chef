@@ -20,7 +20,7 @@ const Works = () => {
 				<CarouselProvider
 					naturalSlideWidth={100}
 					naturalSlideHeight={40}
-					totalSlides={3}
+					totalSlides={works.length}
 				>
 					<Slider>
 						{works.map((work) => (

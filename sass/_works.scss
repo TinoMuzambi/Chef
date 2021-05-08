@@ -26,5 +26,21 @@
 		background: $primary-light;
 		color: $primary-dark;
 		padding: 4rem 3rem;
+
+		.work {
+			@extend %flex;
+			gap: 10rem;
+
+			img {
+				object-fit: cover;
+				height: 20rem;
+				width: 50%;
+			}
+
+			.text {
+				@include flexAllCol;
+				gap: 2rem;
+			}
+		}
 	}
 }
