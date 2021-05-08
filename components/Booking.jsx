@@ -9,7 +9,9 @@ const Booking = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		alert(name + " " + email + " " + phone + " " + date + " " + comments);
 	};
+
 	return (
 		<section className="booking">
 			<div className="form-holder">
