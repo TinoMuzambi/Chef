@@ -36,10 +36,10 @@ const Works = () => {
 							</Slide>
 						))}
 					</Slider>
-					<ButtonBack>
+					<ButtonBack className="left">
 						<BsChevronLeft />
 					</ButtonBack>
-					<ButtonNext>
+					<ButtonNext className="right">
 						<BsChevronRight />
 					</ButtonNext>
 				</CarouselProvider>
