@@ -48,7 +48,6 @@
 		color: $primary-dark;
 		padding: 4rem 4rem;
 		position: relative;
-		overflow-x: hidden;
 
 		@include mq(768px) {
 			padding: 2rem 1rem;
@@ -72,13 +71,32 @@
 
 				@include mq(768px) {
 					width: 100%;
-					// height: 30vh;
+				}
+
+				@include mq(500px) {
+					height: 50vh;
 				}
 			}
 
 			.text {
 				@include flexAllCol;
 				gap: 2rem;
+			}
+		}
+
+		button.slick-arrow.slick-next,
+		button.slick-arrow.slick-prev {
+			@include mq(768px) {
+				display: none !important;
+			}
+		}
+
+		li,
+		li.slick-active {
+			button {
+				&::before {
+					color: $white;
+				}
 			}
 		}
 	}
