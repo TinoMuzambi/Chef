@@ -8,8 +8,24 @@ const Nav = () => {
 				>
 					Home
 				</li>
-				<li>Works</li>
-				<li>Booking</li>
+				<li
+					onClick={() =>
+						document
+							.querySelector(".works")
+							.scrollIntoView({ behavior: "smooth" })
+					}
+				>
+					Works
+				</li>
+				<li
+					onClick={() =>
+						document
+							.querySelector(".booking")
+							.scrollIntoView({ behavior: "smooth" })
+					}
+				>
+					Booking
+				</li>
 			</ul>
 		</nav>
 	);
