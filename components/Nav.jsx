@@ -3,9 +3,9 @@ const Nav = () => {
 		<nav>
 			<h3 className="logo">YourChef</h3>
 			<ul className="links">
-				<li className="link">Home</li>
-				<li className="link">Works</li>
-				<li className="link">Booking</li>
+				<li>Home</li>
+				<li>Works</li>
+				<li>Booking</li>
 			</ul>
 		</nav>
 	);
