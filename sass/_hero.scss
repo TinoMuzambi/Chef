@@ -11,6 +11,10 @@
 		padding: 3rem;
 		text-align: center;
 
+		@include mq(768px) {
+			padding: 2.5rem;
+		}
+
 		.title {
 			color: $primary-light;
 			font-size: 4rem;

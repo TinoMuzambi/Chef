@@ -23,6 +23,7 @@
 		padding: 10rem 2rem;
 		text-align: center;
 		z-index: 2;
+		overflow-x: hidden;
 
 		@include mq(768px) {
 			width: 100%;
