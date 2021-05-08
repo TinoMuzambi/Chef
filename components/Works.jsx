@@ -7,6 +7,7 @@ import {
 	DotGroup,
 } from "pure-react-carousel";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { isMobile } from "react-device-detect";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
 import works from "../data/works";
@@ -18,10 +19,10 @@ const Works = () => {
 				<p className="title">Straight From the Source</p>
 				<h2 className="subtitle">YourChef Works</h2>
 			</div>
-			<div className="carousel">
+			<div className="carousel-wrapper">
 				<CarouselProvider
 					naturalSlideWidth={100}
-					naturalSlideHeight={40}
+					naturalSlideHeight={isMobile ? 120 : 40}
 					totalSlides={works.length}
 					infinite={true}
 					isPlaying={true}
