@@ -39,10 +39,7 @@ const Home = () => (
 
 			<meta charSet="utf-8" />
 			<link rel="icon" href="/favicon.ico" />
-			<meta
-				name="Elle Zeka"
-				content="People buy with their eyes, we worry about what they see."
-			/>
+			<meta name="Your Chef" content="Your one stop for all your chef needs." />
 			<link rel="apple-touch-icon" href="/logo192.png" />
 			<link rel="manifest" href="/manifest.json" />
 			<title>{title}</title>
@@ -55,17 +52,8 @@ const Home = () => (
 				crossOrigin="anonymous"
 			/>
 
-			{/* Mapbox Library */}
-			<link
-				href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
-				rel="stylesheet"
-			/>
-
 			<link rel="preconnect" href="https://api.storyblok.com" />
 			<link rel="preconnect" href="https://a.storyblok.com" />
-			<link rel="preconnect" href="https://www.google-analytics.com" />
-			<link rel="preconnect" href="https://www.api.mapbox.com" />
-			<link rel="preconnect" href="https://www.mapbox.com" />
 		</Head>
 		<Nav />
 		<Hero />
