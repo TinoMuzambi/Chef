@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
+import Works from "../components/Works";
 
 const keywords = "chef, private chef, cook, recipes, business, catering";
 const title = "Your Chef";
@@ -68,6 +69,7 @@ const Home = () => (
 		</Head>
 		<Nav />
 		<Hero />
+		<Works />
 	</>
 );
 
