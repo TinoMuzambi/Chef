@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Nav from "../components/Nav";
+import Hero from "../components/Hero";
 
 const keywords = "chef, private chef, cook, recipes, business, catering";
 const title = "Your Chef";
@@ -66,6 +67,7 @@ const Home = () => (
 			<link rel="preconnect" href="https://www.mapbox.com" />
 		</Head>
 		<Nav />
+		<Hero />
 	</>
 );
 
