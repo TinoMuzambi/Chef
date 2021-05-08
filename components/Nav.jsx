@@ -4,29 +4,34 @@ const Nav = () => {
 	const [active, setActive] = useState(false);
 
 	return (
-		<nav>
+		<nav className={`${active ? "active" : ""}`}>
 			<h3 className="logo">YourChef</h3>
 			<ul className="links">
 				<li
-					onClick={() => document.body.scrollIntoView({ behavior: "smooth" })}
+					onClick={() => {
+						setActive(false);
+						document.body.scrollIntoView({ behavior: "smooth" });
+					}}
 				>
 					Home
 				</li>
 				<li
-					onClick={() =>
+					onClick={() => {
+						setActive(false);
 						document
 							.querySelector(".works")
-							.scrollIntoView({ behavior: "smooth" })
-					}
+							.scrollIntoView({ behavior: "smooth" });
+					}}
 				>
 					Works
 				</li>
 				<li
-					onClick={() =>
+					onClick={() => {
+						setActive(false);
 						document
 							.querySelector(".booking")
-							.scrollIntoView({ behavior: "smooth" })
-					}
+							.scrollIntoView({ behavior: "smooth" });
+					}}
 				>
 					Booking
 				</li>
