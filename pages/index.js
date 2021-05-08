@@ -1,7 +1,9 @@
+import Nav from "../components/Nav";
+
 const Home = () => (
-	<main>
-		<h1>Welcome to Next.js</h1>
-	</main>
+	<>
+		<Nav />
+	</>
 );
 
 export default Home;
