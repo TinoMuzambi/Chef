@@ -5,7 +5,9 @@ import {
 	ButtonBack,
 	ButtonNext,
 } from "pure-react-carousel";
+
 import "pure-react-carousel/dist/react-carousel.es.css";
+import works from "../data/works";
 
 const Works = () => {
 	return (
@@ -21,9 +23,17 @@ const Works = () => {
 					totalSlides={3}
 				>
 					<Slider>
-						<Slide index={0}>I am the first Slide.</Slide>
-						<Slide index={1}>I am the second Slide.</Slide>
-						<Slide index={2}>I am the third Slide.</Slide>
+						{works.map((work) => (
+							<Slide index={work.id} key={work.id}>
+								<div className="work">
+									<img src={work.image} alt={work.title} />
+									<div className="text">
+										<h3 className="title">{work.title}</h3>
+										<p className="serving">{work.serving}</p>
+									</div>
+								</div>
+							</Slide>
+						))}
 					</Slider>
 					<ButtonBack>Back</ButtonBack>
 					<ButtonNext>Next</ButtonNext>
