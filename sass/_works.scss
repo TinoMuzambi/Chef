@@ -55,10 +55,9 @@
 		}
 
 		.work {
-			@extend %flex;
+			display: flex !important;
 			justify-content: center;
 			gap: 10rem;
-			height: 100%;
 
 			@include mq(768px) {
 				flex-direction: column;
@@ -68,7 +67,7 @@
 
 			img {
 				object-fit: cover;
-				height: 60%;
+				height: 70vh;
 				width: 40rem;
 
 				@include mq(768px) {

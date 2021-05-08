@@ -1,18 +1,18 @@
-import {
-	CarouselProvider,
-	Slider,
-	Slide,
-	ButtonBack,
-	ButtonNext,
-	DotGroup,
-} from "pure-react-carousel";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { isMobile } from "react-device-detect";
+import Slider from "react-slick";
 
-import "pure-react-carousel/dist/react-carousel.es.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import works from "../data/works";
 
 const Works = () => {
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	};
 	return (
 		<section className="works">
 			<div className="lead">
@@ -20,34 +20,24 @@ const Works = () => {
 				<h2 className="subtitle">YourChef Works</h2>
 			</div>
 			<div className="carousel-wrapper">
-				<CarouselProvider
-					naturalSlideWidth={100}
-					naturalSlideHeight={isMobile ? 120 : 40}
-					totalSlides={works.length}
-					infinite={true}
-					isPlaying={true}
-				>
-					<Slider>
-						{works.map((work) => (
-							<Slide index={work.id} key={work.id}>
-								<div className="work">
-									<img src={work.image} alt={work.title} />
-									<div className="text">
-										<h3 className="title">{work.title}</h3>
-										<p className="serving">{work.serving}</p>
-									</div>
-								</div>
-							</Slide>
-						))}
-					</Slider>
-					<ButtonBack className="left">
+				<Slider {...settings}>
+					{works.map((work) => (
+						<div className="work" key={work.id}>
+							<img src={work.image} alt={work.title} />
+							<div className="text">
+								<h3 className="title">{work.title}</h3>
+								<p className="serving">{work.serving}</p>
+							</div>
+						</div>
+					))}
+				</Slider>
+				{/* <ButtonBack className="left">
 						<BsChevronLeft />
 					</ButtonBack>
 					<ButtonNext className="right">
 						<BsChevronRight />
 					</ButtonNext>
-					<DotGroup className="dots" showAsSelectedForCurrentSlideOnly={true} />
-				</CarouselProvider>
+					<DotGroup className="dots" showAsSelectedForCurrentSlideOnly={true} /> */}
 			</div>
 		</section>
 	);
