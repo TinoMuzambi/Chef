@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const Nav = () => {
+	const [active, setActive] = useState(false);
+
 	return (
 		<nav>
 			<h3 className="logo">YourChef</h3>
@@ -28,7 +32,10 @@ const Nav = () => {
 				</li>
 			</ul>
 
-			<div className="burger">
+			<div
+				className={`burger ${active ? "active" : ""}`}
+				onClick={() => setActive(!active)}
+			>
 				<div className="top"></div>
 				<div className="middle"></div>
 				<div className="bottom"></div>

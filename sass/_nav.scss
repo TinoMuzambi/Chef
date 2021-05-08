@@ -12,6 +12,10 @@ nav {
 		@extend %flex;
 		gap: 1rem;
 
+		@include mq(768px) {
+			display: none;
+		}
+
 		li {
 			cursor: pointer;
 
@@ -25,7 +29,7 @@ nav {
 		@include mq(768px) {
 			width: 3rem;
 			position: absolute;
-			top: 2rem;
+			top: 3rem;
 			right: 2rem;
 
 			.top,
@@ -35,6 +39,20 @@ nav {
 				height: 1px;
 				background: $white;
 				margin-bottom: 1rem;
+				transition: opacity 0.2s;
+				transition: transform 0.5s;
+			}
+
+			&.active {
+				.top {
+					transform: rotate(45deg) translateY(1.5rem);
+				}
+				.middle {
+					opacity: 0;
+				}
+				.bottom {
+					transform: rotate(135deg) translateY(1.5rem);
+				}
 			}
 		}
 	}
