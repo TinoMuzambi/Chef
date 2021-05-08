@@ -1,16 +1,57 @@
+import { useState } from "react";
+
 const Booking = () => {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [phone, setPhone] = useState("");
+	const [date, setDate] = useState("");
+	const [comments, setComments] = useState("");
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		alert(name + " " + email + " " + phone + " " + date + " " + comments);
+	};
+
 	return (
 		<section className="booking">
 			<div className="form-holder">
 				<h1 className="title">Make a Booking</h1>
 				<p className="subtitle">Fair Prices, Guaranteed</p>
 
-				<form>
-					<input type="text" placeholder="Name" />
-					<input type="email" placeholder="Email" />
-					<input type="tel" placeholder="Phone" />
-					<input type="date" placeholder="Booking Date" />
-					<textarea placeholder="Comments"></textarea>
+				<form onSubmit={(e) => handleSubmit(e)}>
+					<input
+						type="text"
+						placeholder="Name"
+						required
+						value={name}
+						onChange={(e) => setName(e.target.value)}
+					/>
+					<input
+						type="email"
+						placeholder="Email"
+						required
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+					<input
+						type="tel"
+						placeholder="Phone"
+						value={phone}
+						onChange={(e) => setPhone(e.target.value)}
+					/>
+					<input
+						type="date"
+						placeholder="Booking Date"
+						required
+						value={date}
+						onChange={(e) => setDate(e.target.value)}
+					/>
+					<textarea
+						placeholder="Comments"
+						required
+						value={comments}
+						onChange={(e) => setComments(e.target.value)}
+					></textarea>
 					<button type="submit">Submit</button>
 				</form>
 			</div>
