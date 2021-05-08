@@ -4,6 +4,7 @@ import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import Works from "../components/Works";
 import Booking from "../components/Booking";
+import Footer from "../components/Footer";
 
 const keywords = "chef, private chef, cook, recipes, business, catering";
 const title = "Your Chef";
@@ -52,6 +53,7 @@ const Home = () => (
 		<Hero />
 		<Works />
 		<Booking />
+		<Footer />
 	</>
 );
 
