@@ -21,10 +21,6 @@ body {
 	display: flex;
 }
 
-%point {
-	cursor: pointer;
-}
-
 @mixin flexColCenter {
 	@extend %flex;
 	justify-content: center;
