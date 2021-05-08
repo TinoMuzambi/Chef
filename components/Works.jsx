@@ -1,4 +1,3 @@
-import { isMobile } from "react-device-detect";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
