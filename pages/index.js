@@ -44,14 +44,6 @@ const Home = () => (
 			<link rel="manifest" href="/manifest.json" />
 			<title>{title}</title>
 
-			{/* AOS Library */}
-			<link
-				rel="stylesheet"
-				href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-				integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-				crossOrigin="anonymous"
-			/>
-
 			<link rel="preconnect" href="https://api.storyblok.com" />
 			<link rel="preconnect" href="https://a.storyblok.com" />
 		</Head>
