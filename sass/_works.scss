@@ -6,6 +6,11 @@
 		@include flexAllCol;
 		gap: 2rem;
 		position: relative;
+		text-align: center;
+
+		@include mq(768px) {
+			// background-size: cover;
+		}
 
 		&::after {
 			content: "";
@@ -22,25 +27,55 @@
 			z-index: 2;
 		}
 
+		.title {
+			@include mq(768px) {
+				order: 2;
+			}
+		}
+
 		.subtitle {
 			font-size: 3rem;
+
+			@include mq(768px) {
+				font-size: 2rem;
+				order: 1;
+			}
 		}
 	}
 
-	.carousel {
+	.carousel-wrapper {
 		background: $primary-light;
 		color: $primary-dark;
-		padding: 4rem 3rem;
+		padding: 4rem 4rem;
 		position: relative;
 
+		@include mq(768px) {
+			padding: 2rem 1rem;
+		}
+
 		.work {
-			@extend %flex;
+			display: flex !important;
+			justify-content: center;
 			gap: 10rem;
+
+			@include mq(768px) {
+				flex-direction: column;
+				justify-content: start;
+				gap: 2rem;
+			}
 
 			img {
 				object-fit: cover;
-				height: 20rem;
-				width: 50%;
+				height: 70vh;
+				width: 40rem;
+
+				@include mq(768px) {
+					width: 100%;
+				}
+
+				@include mq(500px) {
+					height: 50vh;
+				}
 			}
 
 			.text {
@@ -49,46 +84,19 @@
 			}
 		}
 
-		button.carousel__back-button.left,
-		button.carousel__next-button.right {
-			background: none;
-			outline: none;
-			border: none;
-			font-size: 2.5rem;
-			color: $white;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-
-			&:hover {
-				opacity: 0.5;
+		button.slick-arrow.slick-next,
+		button.slick-arrow.slick-prev {
+			@include mq(768px) {
+				display: none !important;
 			}
 		}
 
-		button.carousel__next-button.right {
-			left: unset;
-			right: 0;
-		}
-
-		.carousel__dot-group.dots {
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			@include flexAllRow;
-			gap: 1rem;
-		}
-
-		.carousel__dot {
-			height: 0.5rem;
-			width: 0.5rem;
-			border: none;
-			outline: none;
-			border-radius: 50%;
-			background-color: rgba($color: $white, $alpha: 0.3);
-
-			&--selected {
-				background-color: $white;
+		li,
+		li.slick-active {
+			button {
+				&::before {
+					color: $white;
+				}
 			}
 		}
 	}

@@ -3,14 +3,30 @@
 	background: $secondary-dark;
 	padding: 3rem 0;
 
+	@include mq(768px) {
+		padding: 0;
+	}
+
 	.text {
 		padding: 3rem;
 		text-align: center;
+
+		@include mq(768px) {
+			padding: 2.5rem;
+		}
 
 		.title {
 			color: $primary-light;
 			font-size: 4rem;
 			padding-bottom: 1rem;
+
+			@include mq(768px) {
+				font-size: 3rem;
+			}
+		}
+
+		@include mq(768px) {
+			order: 2;
 		}
 	}
 
@@ -19,5 +35,14 @@
 		height: 40vh;
 		width: 90%;
 		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+
+		@include mq(768px) {
+			width: 100%;
+			background-attachment: initial;
+			order: 1;
+			height: 50vh;
+		}
 	}
 }
