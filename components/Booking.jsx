@@ -14,10 +14,12 @@ const Booking = () => {
 					<button type="submit">Submit</button>
 				</form>
 			</div>
-			<img
-				src="https://images.unsplash.com/photo-1596529258120-29aec0ce4d63?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1532&q=80"
-				alt="Black male chef"
-			/>
+			<div className="img-wrapper">
+				<img
+					src="https://images.unsplash.com/photo-1610851467843-fe4a65aea9c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
+					alt="Black male chef"
+				/>
+			</div>
 		</section>
 	);
 };

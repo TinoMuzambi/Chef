@@ -1,0 +1,73 @@
+.booking {
+	@extend %flex;
+
+	.form-holder {
+		width: 50%;
+		padding: 10rem 2rem;
+		text-align: center;
+
+		.title {
+			font-size: 3rem;
+			color: $primary-light;
+		}
+
+		.subtitle {
+			margin: 2rem 0;
+		}
+
+		form {
+			@include flexColCenter;
+			gap: 1rem;
+
+			input,
+			textarea {
+				background: none;
+				font-family: inherit;
+				color: inherit;
+				font-size: 1rem;
+				border: 1px solid transparent;
+				outline: none;
+				border-bottom: 1px solid $white;
+				padding: 0.5rem;
+
+				&:hover,
+				&:focus {
+					border: 1px solid $white;
+				}
+			}
+
+			textarea {
+				resize: none;
+				height: 10rem;
+			}
+
+			button {
+				width: 40%;
+				margin: 2rem auto;
+				padding: 1.5rem 4rem;
+				border: none;
+				outline: none;
+				font-family: inherit;
+				font-weight: 200;
+				font-size: 1rem;
+				cursor: pointer;
+				transition: 0.5s;
+
+				&:hover {
+					background: rgb(165, 166, 168);
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.img-wrapper {
+		width: 50%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

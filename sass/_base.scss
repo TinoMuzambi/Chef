@@ -17,6 +17,7 @@ body {
 	font-family: $primary-font;
 	background: $primary-dark;
 	color: $white;
+	overflow-x: hidden;
 }
 
 %flex {
