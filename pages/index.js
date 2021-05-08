@@ -2,11 +2,12 @@ import Head from "next/head";
 
 import Nav from "../components/Nav";
 
-const keywords = "";
+const keywords = "chef, private chef, cook, recipes, business, catering";
 const title = "Your Chef";
-const description = "";
-const image = "";
-const url = "";
+const description = "Your one stop for all your chef needs.";
+const image =
+	"https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80";
+const url = "https://chef.vercel.app/";
 
 const Home = () => (
 	<>
