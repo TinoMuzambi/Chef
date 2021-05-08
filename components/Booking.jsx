@@ -6,11 +6,11 @@ const Booking = () => {
 				<p className="subtitle">Fair Prices, Guaranteed</p>
 
 				<form>
-					<input type="text" placeholder="Name" />
-					<input type="email" placeholder="Email" />
+					<input type="text" placeholder="Name" required />
+					<input type="email" placeholder="Email" required />
 					<input type="tel" placeholder="Phone" />
-					<input type="date" placeholder="Booking Date" />
-					<textarea placeholder="Comments"></textarea>
+					<input type="date" placeholder="Booking Date" required />
+					<textarea placeholder="Comments" required></textarea>
 					<button type="submit">Submit</button>
 				</form>
 			</div>
