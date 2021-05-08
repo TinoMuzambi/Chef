@@ -27,6 +27,12 @@ const Nav = () => {
 					Booking
 				</li>
 			</ul>
+
+			<div className="burger">
+				<div className="top"></div>
+				<div className="middle"></div>
+				<div className="bottom"></div>
+			</div>
 		</nav>
 	);
 };
