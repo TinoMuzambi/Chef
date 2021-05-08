@@ -5,6 +5,7 @@ import {
 	ButtonBack,
 	ButtonNext,
 } from "pure-react-carousel";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
 import works from "../data/works";
@@ -35,8 +36,12 @@ const Works = () => {
 							</Slide>
 						))}
 					</Slider>
-					<ButtonBack>Back</ButtonBack>
-					<ButtonNext>Next</ButtonNext>
+					<ButtonBack>
+						<BsChevronLeft />
+					</ButtonBack>
+					<ButtonNext>
+						<BsChevronRight />
+					</ButtonNext>
 				</CarouselProvider>
 			</div>
 		</section>
